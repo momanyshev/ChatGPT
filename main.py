@@ -1,12 +1,12 @@
+import config
 import openai
 from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 
-token = ''
-openai.api_key = ''
+openai.api_key = config.OPENAI_TOKEN
 
-bot = Bot(token)
+bot = Bot(token=config.TOKEN)
 dp = Dispatcher(bot)
 
 @dp.message_handler()
